@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Options, RespCallback, ISourceNews } from './types';
 
 export interface ISourceData {
@@ -50,7 +51,6 @@ export interface INews {
 }
 export interface ISource {
   draw(data: ISourceData[]): void;
-  drawSelect(data: ISourceData[]): void;
 }
 export interface IData {
   status: string;
