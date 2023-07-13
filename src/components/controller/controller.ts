@@ -7,6 +7,10 @@ class AppController extends AppLoader implements IAppController {
     super.getResp(
       {
         endpoint: 'sources',
+        options: {
+          apiKey: `${this.options.apiKey}`,
+          sources: '',
+        },
       },
       callback
     );
