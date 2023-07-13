@@ -29,7 +29,7 @@ export interface IApp {
 export interface IAppController {
   getSources({ callback }: { callback: RespCallback }): void;
   getNews({ e, callback }: { e: Event; callback: RespCallback }): void;
-  getNewsMobile({ e, callback }: { e: Event; callback: RespCallback }): void;
+  // getNewsMobile({ e, callback }: { e: Event; callback: RespCallback }): void;
 }
 
 export interface ILoader {
@@ -51,6 +51,7 @@ export interface INews {
 }
 export interface ISource {
   draw(data: ISourceData[]): void;
+  // drawSelect(data: ISourceData[]): void;
 }
 export interface IData {
   status: string;
