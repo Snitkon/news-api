@@ -1,4 +1,4 @@
-import { IApp, IData } from 'components/types/interfaces';
+import { IApp } from 'components/types/interfaces';
 import AppController from '../controller/controller';
 import { AppView } from '../view/appView';
 
@@ -12,8 +12,8 @@ class App implements IApp {
   }
 
   start() {
-    const element = document.querySelector('.sources') as HTMLElement;
-    element.addEventListener('click', (e: Event) =>
+    const element: Element | null = document.querySelector('.sources');
+    const receiveNews = (e: Event) =>
       this.controller.getNews({
         e,
         callback: (data) => {
@@ -21,8 +21,13 @@ class App implements IApp {
             this.view.drawNews(data);
           }
         },
-      })
-    );
+      });
+    if (window.innerWidth >= 1000) {
+      if (element) {
+        element.addEventListener('click', receiveNews);
+      }
+    }
+
     this.controller.getSources({
       callback: (data) => {
         if (data) {

@@ -20,12 +20,12 @@ class AppController extends AppLoader implements IAppController {
     if (e.target && e.currentTarget) {
       let target: EventTarget = e.target;
       const newsContainer = e.currentTarget as HTMLInputElement;
-
       while (target !== newsContainer) {
         const inputElement = target as HTMLInputElement;
         const inputElementContainer = newsContainer as HTMLInputElement;
-        if (inputElement.classList.contains('source__item') && inputElement.getAttribute('data-sourse-id')) {
+        if (inputElement.classList.contains('source__item') && inputElement.getAttribute('data-source-id')) {
           const sourceId = inputElement.getAttribute('data-source-id');
+          console.log(sourceId)
           if (inputElementContainer.getAttribute('data-source') != sourceId && sourceId) {
             inputElementContainer.setAttribute('data-source', sourceId);
             super.getResp(
