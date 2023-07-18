@@ -1,8 +1,8 @@
-import { IApp } from 'components/types/interfaces';
+import { IApp } from '../types/interfaces';
 import AppController from '../controller/controller';
 import { AppView } from '../view/appView';
-import FilterLoader from 'components/filter/filterLoader';
-import { CheckID } from 'components/types/enums';
+import FilterLoader from '../filter/filterLoader';
+import { CheckID } from '../types/enums';
 
 class App implements IApp {
   private controller: AppController;
@@ -60,6 +60,7 @@ class App implements IApp {
     this.controller.getSources({
       callback: (data) => {
         if (data) {
+          console.log(data);
           this.filter.addCheckArea(data);
           this.view.drawSources(data);
           const category: HTMLElement | null = document.querySelector(CheckID.category);

@@ -1,7 +1,7 @@
 import { CheckID } from 'components/types/enums';
 import { INewsFilter, ISourceData } from 'components/types/interfaces';
 
-export class NewsFilter implements INewsFilter {
+class NewsFilter implements INewsFilter {
   private category: HTMLSelectElement | null;
   private country: HTMLSelectElement | null;
   private language: HTMLSelectElement | null;
@@ -61,3 +61,5 @@ export class NewsFilter implements INewsFilter {
     return filterValues;
   }
 }
+
+export default NewsFilter;

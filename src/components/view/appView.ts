@@ -1,7 +1,7 @@
-import { IAppView, IData, IResponseNews, ISourceData } from 'components/types/interfaces';
+import { IAppView, IData, IResponseNews, ISourceData } from '../types/interfaces';
 import News from './news/news';
 import Sources from './sources/sources';
-import { NewsFilter } from 'components/filter/newsFilter';
+import NewsFilter from '../filter/newsFilter';
 
 export class AppView implements IAppView {
   protected news: News;
@@ -11,7 +11,7 @@ export class AppView implements IAppView {
   constructor() {
     this.news = new News();
     this.sources = new Sources();
-    this.filter = new NewsFilter()
+    this.filter = new NewsFilter();
   }
 
   drawNews(data: IData): void {
@@ -23,7 +23,10 @@ export class AppView implements IAppView {
 
   drawSources(data: IData): void {
     const values: ISourceData[] = data?.sources ? data?.sources : [];
-    this.sources.draw(values);
+    window.innerWidth >= 1000
+      ? this.sources.draw(this.filter.filterData(values))
+      : this.sources.drawSelect(this.filter.filterData(values));
+    // this.sources.draw(values);
   }
 }
 

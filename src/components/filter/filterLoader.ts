@@ -1,6 +1,6 @@
-import { CheckCategoryName } from 'components/types/enums';
-import { IData, IFilterloader, ISourceData } from 'components/types/interfaces';
-import { INewsSourceObject } from 'components/types/types';
+import { CheckCategoryName } from '../types/enums';
+import { IData, IFilterloader, ISourceData } from '../types/interfaces';
+import { INewsSourceObject } from '../types/types';
 
 class FilterLoader implements IFilterloader {
   addCheckArea(data: IData): void {
@@ -13,7 +13,8 @@ class FilterLoader implements IFilterloader {
         country: new Set(),
         language: new Set(),
       };
-      for (const key in newsSourceObject) {
+      // eslint-disable-next-line prefer-const
+      for (let key in newsSourceObject) {
         const newsCategoryName: HTMLElement = document.createElement('p3');
         const newsCategory: HTMLElement = document.createElement('select');
         if (checkCategory) {

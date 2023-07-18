@@ -1,4 +1,4 @@
-import { ISource, ISourceData } from 'components/types/interfaces';
+import { ISource, ISourceData } from '../../types/interfaces';
 import './sources.css';
 
 class Sources implements ISource {
