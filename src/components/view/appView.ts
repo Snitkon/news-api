@@ -26,7 +26,6 @@ export class AppView implements IAppView {
     window.innerWidth >= 1000
       ? this.sources.draw(this.filter.filterData(values))
       : this.sources.drawSelect(this.filter.filterData(values));
-    // this.sources.draw(values);
   }
 }
 

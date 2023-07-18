@@ -39,39 +39,39 @@
 
 @media screen and (max-width: 1000px) {
   .check__type {
-    width: 60%;
+    width: 100%;
     flex-direction: column;
   }
   .news__category_select {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
   }
   .news__category_name {
-    width: 80%;
+    width: 100%;
     text-align: center;
     margin: 0 auto;
   }
-  /* .sources {
-        display: none;
-    } */
+  .sources {
+    display: none;
+  }
   .sources__select_target {
     display: flex;
     flex-direction: column;
-    width: 48%;
+    width: 100%;
     margin: 0 auto;
   }
 }
 @media screen and (max-width: 700px) {
   .check__type {
-    width: 320px;
+    width: 100%;
   }
   .news__category_select {
-    width: 320px;
+    width: 100%;
   }
   .news__category_name {
-    width: 320px;
+    width: 100%;
   }
   .sources__select_target {
-    width: 320px;
+    width: 100%;
   }
 }

@@ -1,3 +1,4 @@
+import './filter.css';
 import { CheckCategoryName } from '../types/enums';
 import { IData, IFilterloader, ISourceData } from '../types/interfaces';
 import { INewsSourceObject } from '../types/types';

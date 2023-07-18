@@ -1,5 +1,5 @@
-import { CheckID } from 'components/types/enums';
-import { INewsFilter, ISourceData } from 'components/types/interfaces';
+import { CheckID } from '../types/enums';
+import { INewsFilter, ISourceData } from '../types/interfaces';
 
 class NewsFilter implements INewsFilter {
   private category: HTMLSelectElement | null;

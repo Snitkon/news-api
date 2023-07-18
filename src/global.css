@@ -3,9 +3,23 @@ body {
   background: #17181c;
   font-family: sans-serif;
 }
+a {
+  text-decoration: none;
+  color: rgb(155, 151, 151);
+}
+a:hover {
+  text-decoration: underline;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
 
 header {
-  padding: 10px 30px;
+  width: 90%;
+  padding: 10px 10px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 header h1 {
@@ -14,7 +28,7 @@ header h1 {
 }
 
 footer {
-  height: 100px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,12 +38,60 @@ footer .copyright {
   color: #333;
   text-align: center;
 }
-footer .copyright a {
-  color: #444;
+footer .github_link {
+  font-size: 14px;
+  color: rgb(155, 151, 151);
+  text-align: center;
 }
-footer .copyright a:hover {
-  color: #555;
+footer .link {
+  width: 90px;
 }
 footer .copyright:before {
   content: '©';
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 90%;
+  padding: 3%;
+  margin: inherit;
+}
+.news {
+  width: 100%;
+  height: 100%;
+}
+.buttons:hover {
+  cursor: pointer;
+}
+.logo {
+  display: flex;
+  margin: 0 auto;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  background-image: url(./img/logo_rs_text.svg);
+  background-repeat: no-repeat;
+  background-size: 90%;
+}
+
+@media screen and (min-width: 1201px) {
+  .container {
+    width: 1200px;
+  }
+  .news__category_name {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 319px) {
+  .container {
+    width: 320px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  footer {
+    height: 100%;
+    flex-direction: column;
+  }
 }

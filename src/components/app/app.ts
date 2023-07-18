@@ -60,7 +60,6 @@ class App implements IApp {
     this.controller.getSources({
       callback: (data) => {
         if (data) {
-          console.log(data);
           this.filter.addCheckArea(data);
           this.view.drawSources(data);
           const category: HTMLElement | null = document.querySelector(CheckID.category);
